@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ScreenTemplate.Views"
+             x:Class="ScreenTemplate.Views.userPage"
+              BackgroundColor="#d7e8fa">
+    <ContentPage.Content>
+        <StackLayout Margin="20,0,0,0">
+            <Image Margin="-20,100,0,0" Grid.Row="0" Grid.ColumnSpan="2" Source="belports.png"
+               HorizontalOptions="Center"
+               WidthRequest="250"/>
+            <StackLayout></StackLayout>
+            <StackLayout/>
+            <StackLayout/>
+            <StackLayout/>
+            <StackLayout/>
+            <StackLayout/>
+            <Label Text="Email:"
+                   FontAttributes="Bold"
+                   TextColor="Gray"
+                   FontSize="20"
+                   HorizontalOptions="Start"/>
+            <Label Text="{Binding Email}"
+                   TextColor="Gray"
+                   FontSize="20"
+                   HorizontalOptions="Start"/>
+            <Label Text="Password:"
+                    FontAttributes="Bold"
+                   FontSize="20"
+                   TextColor="Gray"
+                   HorizontalOptions="Start"/>
+            <Label Text="{Binding Password}"
+                   TextColor="Gray"
+                   FontSize="20"
+                   HorizontalOptions="Start"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

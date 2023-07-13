@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zj4QchPFu42sGOWfEiEMZv5oRKxceFg48U46oltlcWdsSh3Vx/s+ibGHsH7SUn9G5+NabkF95XXMoo0B+YNowA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.iOS\\ScreenTemplate.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ahmad\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
