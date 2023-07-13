@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScreenTemplate.Views.Profile"
+             BackgroundColor="#d7e8fa">
+    <ContentPage.Content>
+        <Grid RowSpacing="0"
+              ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <Image Margin="0,-170,0,0"  Grid.ColumnSpan="2" Source="Window.jpg"/>
+
+            <Label Grid.Row="1" Grid.ColumnSpan="2"
+               Text="About"
+                   Margin="0,-100,0,0"
+              TextColor="#123261"
+                   FontAttributes="Bold"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"/>
+            <Label Margin="25,-30,18,0"
+                   Grid.Row="1" Grid.ColumnSpan="2"
+                   FontSize="15"
+                    Text="An employee profile provides a comprehensive overview of an individual's professional background, skills, and qualifications. It includes information such as their job title, responsibilities, experience, and educational background. The profile highlights the employee's key strengths, expertise, and accomplishments, giving a clear understanding of their capabilities and contributions to the organization. It may also include additional details like certifications, professional affiliations, and language proficiency. The employee profile serves as a valuable resource for both internal and external stakeholders, enabling them to gain insights into the employee's skills, experience, and potential fit for specific roles or projects."
+              TextColor="#123261"/>
+
+            <Label Grid.Row="2"
+               Grid.ColumnSpan="2"
+               Text="All Rights Reserved."
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+                   TextColor="#123261"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

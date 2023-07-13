@@ -16672,6 +16672,9 @@ namespace ScreenTemplate.Droid
 			// aapt resource value: 0x7F070092
 			public const int tooltip_frame_light = 2131165330;
 			
+			// aapt resource value: 0x7F070093
+			public const int Window = 2131165331;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

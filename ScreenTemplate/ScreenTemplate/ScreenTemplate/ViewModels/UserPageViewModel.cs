@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Xamarin.Forms;
+using ScreenTemplate.Views;
 
 namespace ScreenTemplate.ViewModels
 {
+    
     public class UserPageViewModel : INotifyPropertyChanged
     {
         private string email;
         private string password;
+        public ICommand ProfileCommand { get; private set; }
 
         public string Email
         {
@@ -41,6 +46,11 @@ namespace ScreenTemplate.ViewModels
         {
             Email = email;
             Password = password;
+            ProfileCommand = new Command(ProfilePage);
+        }
+        private void ProfilePage()
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new Profile());
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

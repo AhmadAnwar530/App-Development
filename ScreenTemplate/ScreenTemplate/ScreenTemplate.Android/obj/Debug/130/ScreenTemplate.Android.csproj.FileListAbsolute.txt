@@ -1280,3 +1280,4 @@ C:\Users\ahmad\Source\Repos\App-Development\ScreenTemplate\ScreenTemplate\Screen
 C:\Users\ahmad\Source\Repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\ahmad\Source\Repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\ahmad\Source\Repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\res\drawable\window.jpg

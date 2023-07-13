@@ -34,6 +34,13 @@
                    TextColor="Gray"
                    FontSize="20"
                    HorizontalOptions="Start"/>
+            <Button Text="See your Profile"
+                    BackgroundColor="#123261" 
+                    CornerRadius="10"
+                    BorderWidth="2"
+                    FontSize="20"
+                    Margin="100,100,100,100"
+                    Command="{Binding ProfileCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

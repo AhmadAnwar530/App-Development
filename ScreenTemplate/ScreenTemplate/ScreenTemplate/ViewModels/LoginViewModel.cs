@@ -44,7 +44,7 @@ namespace ScreenTemplate.ViewModels
         {
             try
             {
-                if (Email == "ahmad123@gmail.com" && Password == "123")
+                if (Email == "ahmad123@gmail.com" && Password == "123" || Email == "belports.com" && Password == "111")
                 {
                     UserPageViewModel userPageViewModel = new UserPageViewModel(Email, Password);
 
