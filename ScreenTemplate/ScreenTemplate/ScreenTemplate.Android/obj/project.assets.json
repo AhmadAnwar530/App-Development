@@ -3414,11 +3414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.Android\\ScreenTemplate.Android.csproj",
+      "projectUniqueName": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.Android\\ScreenTemplate.Android.csproj",
       "projectName": "ScreenTemplate.Android",
-      "projectPath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.Android\\ScreenTemplate.Android.csproj",
+      "projectPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.Android\\ScreenTemplate.Android.csproj",
       "packagesPath": "C:\\Users\\ahmad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.Android\\obj\\",
+      "outputPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3439,8 +3439,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj": {
-              "projectPath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj"
+            "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj": {
+              "projectPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj"
             }
           }
         }

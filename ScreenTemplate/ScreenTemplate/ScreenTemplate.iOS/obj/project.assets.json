@@ -1253,11 +1253,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.iOS\\ScreenTemplate.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.iOS\\ScreenTemplate.iOS.csproj",
       "projectName": "ScreenTemplate.iOS",
-      "projectPath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.iOS\\ScreenTemplate.iOS.csproj",
+      "projectPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.iOS\\ScreenTemplate.iOS.csproj",
       "packagesPath": "C:\\Users\\ahmad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.iOS\\obj\\",
+      "outputPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1278,8 +1278,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj": {
-              "projectPath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj"
+            "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj": {
+              "projectPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VSymQ/YMPCHFO/8dKpJyQ5+jdvNYc7w5QaU65uq4UyyYK7OMynXCPYaqv/esWl766mvrFyd4IJ94qfIr+xvPpg==",
+  "dgSpecHash": "vuhbkpUuLYS9uxCa6cwqxuLi/lx5y1hhHXZIfgVphfq4y2kg9YC0HrVbGA/bHyS/6Cpi2tEaNTvZHsSuWfzyfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.Android\\ScreenTemplate.Android.csproj",
+  "projectFilePath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.Android\\ScreenTemplate.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmad\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",

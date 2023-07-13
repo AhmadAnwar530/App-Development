@@ -9,6 +9,7 @@
             <Image Margin="-20,100,0,0" Grid.Row="0" Grid.ColumnSpan="2" Source="belports.png"
                HorizontalOptions="Center"
                WidthRequest="250"/>
+            <!--to give more spcaing-->
             <StackLayout></StackLayout>
             <StackLayout/>
             <StackLayout/>

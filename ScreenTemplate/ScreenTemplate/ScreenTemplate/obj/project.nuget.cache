@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rl4Msd2XFGcpzci9Aao4BtcfriTo5Okh5M4j13d6uQJB9UrTAheqOji2ywKRD/dScpne+pEP+XlMcipmiMQGYw==",
+  "dgSpecHash": "0zhCepKtvPC0WMztLttPfmKkrofcMcSEQ79B29+eqtGmUmoaZqxmb9kilrsgP/Pb7wXbuDU/NlH3vbo2FFtxug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj",
+  "projectFilePath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmad\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

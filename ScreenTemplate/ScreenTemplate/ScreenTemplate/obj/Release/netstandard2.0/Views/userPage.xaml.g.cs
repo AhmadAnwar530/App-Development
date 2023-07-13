@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ScreenTemplate.Views.userPage.xaml", "Views/userPage.xaml", typeof(global::ScreenTemplate.userPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ScreenTemplate.Views.userPage.xaml", "Views/userPage.xaml", typeof(global::ScreenTemplate.Views.userPage))]
 
-namespace ScreenTemplate {
+namespace ScreenTemplate.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\userPage.xaml")]
