@@ -11,7 +11,7 @@
         "projectName": "ScreenTemplate",
         "projectPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj",
         "packagesPath": "C:\\Users\\ahmad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\obj\\",
+        "outputPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,14 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Plugin.Fingerprint": {
+              "target": "Package",
+              "version": "[3.0.0-beta.1, )"
+            },
+            "Xam.Plugins.Forms.ImageCircle": {
+              "target": "Package",
+              "version": "[3.1.1.1-beta, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

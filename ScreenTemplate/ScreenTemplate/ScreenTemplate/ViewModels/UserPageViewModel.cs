@@ -15,6 +15,7 @@ namespace ScreenTemplate.ViewModels
         private string email;
         private string password;
         public ICommand ProfileCommand { get; private set; }
+        public ICommand ToDoListCommand { get; private set; }       
 
         public string Email
         {
@@ -47,10 +48,16 @@ namespace ScreenTemplate.ViewModels
             Email = email;
             Password = password;
             ProfileCommand = new Command(ProfilePage);
+            ToDoListCommand = new Command(ToDoList);
         }
         private void ProfilePage()
         {
             Application.Current.MainPage.Navigation.PushAsync(new Profile());
+        }
+
+        private void ToDoList()
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new ToDoList());
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

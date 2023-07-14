@@ -3,6 +3,10 @@ using System.Windows.Input;
 using ScreenTemplate.Models;
 using Xamarin.Forms;
 using System;
+using Xamarin.Essentials;
+using Plugin.Fingerprint;
+using Plugin.Fingerprint.Abstractions;
+
 
 namespace ScreenTemplate.ViewModels
 {
@@ -10,6 +14,7 @@ namespace ScreenTemplate.ViewModels
     {
         private User user;
         private ICommand loginCommand;
+
 
         //Constructor
         public LoginViewModel()
@@ -62,6 +67,7 @@ namespace ScreenTemplate.ViewModels
                 Application.Current.MainPage.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
             }
         }
+
 
     }
 }

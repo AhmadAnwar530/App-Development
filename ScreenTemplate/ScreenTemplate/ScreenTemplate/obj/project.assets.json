@@ -26,6 +26,19 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Plugin.Fingerprint/3.0.0-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Plugin.Fingerprint.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Fingerprint.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -36,6 +49,22 @@
         "runtime": {
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Xam.Plugins.Forms.ImageCircle/3.1.1.1-beta": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1009999"
+        },
+        "compile": {
+          "lib/netstandard2.0/ImageCircle.Forms.Plugin.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ImageCircle.Forms.Plugin.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -227,6 +256,62 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Plugin.Fingerprint/3.0.0-beta.1": {
+      "sha512": "cqNBAiTB//+cwqaccfrEqg6MHfFFaC/22mWY9fm/eNrKWMrng8+jXdHC1HrxIBKzgQa3e2aZIVxO0SbbmXyCbA==",
+      "type": "package",
+      "path": "plugin.fingerprint/3.0.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/Plugin.Fingerprint.dll",
+        "lib/monoandroid10.0/Plugin.Fingerprint.pdb",
+        "lib/monoandroid10.0/Plugin.Fingerprint.xml",
+        "lib/monoandroid12.0/Plugin.Fingerprint.dll",
+        "lib/monoandroid12.0/Plugin.Fingerprint.pdb",
+        "lib/monoandroid12.0/Plugin.Fingerprint.xml",
+        "lib/net48/Plugin.Fingerprint.dll",
+        "lib/net48/Plugin.Fingerprint.pdb",
+        "lib/net48/Plugin.Fingerprint.xml",
+        "lib/net6.0-android31.0/Plugin.Fingerprint.dll",
+        "lib/net6.0-android31.0/Plugin.Fingerprint.pdb",
+        "lib/net6.0-android31.0/Plugin.Fingerprint.xml",
+        "lib/net6.0-ios15.2/Plugin.Fingerprint.dll",
+        "lib/net6.0-ios15.2/Plugin.Fingerprint.pdb",
+        "lib/net6.0-ios15.2/Plugin.Fingerprint.xml",
+        "lib/net6.0-maccatalyst15.2/Plugin.Fingerprint.dll",
+        "lib/net6.0-maccatalyst15.2/Plugin.Fingerprint.pdb",
+        "lib/net6.0-maccatalyst15.2/Plugin.Fingerprint.xml",
+        "lib/net6.0-windows10.0.19041/Plugin.Fingerprint.dll",
+        "lib/net6.0-windows10.0.19041/Plugin.Fingerprint.pdb",
+        "lib/net6.0-windows10.0.19041/Plugin.Fingerprint.xml",
+        "lib/netstandard2.0/Plugin.Fingerprint.dll",
+        "lib/netstandard2.0/Plugin.Fingerprint.pdb",
+        "lib/netstandard2.0/Plugin.Fingerprint.xml",
+        "lib/tizen40/Plugin.Fingerprint.dll",
+        "lib/tizen40/Plugin.Fingerprint.pdb",
+        "lib/tizen40/Plugin.Fingerprint.xml",
+        "lib/uap10.0.19041/Plugin.Fingerprint.dll",
+        "lib/uap10.0.19041/Plugin.Fingerprint.pdb",
+        "lib/uap10.0.19041/Plugin.Fingerprint.pri",
+        "lib/uap10.0.19041/Plugin.Fingerprint.xml",
+        "lib/xamarinios10/Plugin.Fingerprint.dll",
+        "lib/xamarinios10/Plugin.Fingerprint.pdb",
+        "lib/xamarinios10/Plugin.Fingerprint.xml",
+        "lib/xamarinmac20/Plugin.Fingerprint.dll",
+        "lib/xamarinmac20/Plugin.Fingerprint.pdb",
+        "lib/xamarinmac20/Plugin.Fingerprint.xml",
+        "lib/xamarintvos10/Plugin.Fingerprint.dll",
+        "lib/xamarintvos10/Plugin.Fingerprint.pdb",
+        "lib/xamarintvos10/Plugin.Fingerprint.xml",
+        "lib/xamarinwatchos10/Plugin.Fingerprint.dll",
+        "lib/xamarinwatchos10/Plugin.Fingerprint.pdb",
+        "lib/xamarinwatchos10/Plugin.Fingerprint.xml",
+        "plugin.fingerprint.3.0.0-beta.1.nupkg.sha512",
+        "plugin.fingerprint.nuspec",
+        "readme.md",
+        "xamarin_fingerprint.png"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -272,6 +357,39 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xam.Plugins.Forms.ImageCircle/3.1.1.1-beta": {
+      "sha512": "E/r5CJm6gV2duE25pJEOEorkAS6xBcBoJ82zbJjynnKwIUPoPofDyO2pOec4DxqZoTulRtUVw62y2PjAfGh5bQ==",
+      "type": "package",
+      "path": "xam.plugins.forms.imagecircle/3.1.1.1-beta",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/ImageCircle.Forms.Plugin.dll",
+        "lib/monoandroid71/ImageCircle.Forms.Plugin.pdb",
+        "lib/monoandroid71/ImageCircle.Forms.Plugin.xml",
+        "lib/monoandroid80/ImageCircle.Forms.Plugin.dll",
+        "lib/monoandroid80/ImageCircle.Forms.Plugin.pdb",
+        "lib/monoandroid80/ImageCircle.Forms.Plugin.xml",
+        "lib/monoandroid81/ImageCircle.Forms.Plugin.dll",
+        "lib/monoandroid81/ImageCircle.Forms.Plugin.pdb",
+        "lib/monoandroid81/ImageCircle.Forms.Plugin.xml",
+        "lib/netstandard2.0/ImageCircle.Forms.Plugin.dll",
+        "lib/netstandard2.0/ImageCircle.Forms.Plugin.pdb",
+        "lib/netstandard2.0/ImageCircle.Forms.Plugin.xml",
+        "lib/uap10.0.16299/ImageCircle.Forms.Plugin.dll",
+        "lib/uap10.0.16299/ImageCircle.Forms.Plugin.pdb",
+        "lib/uap10.0.16299/ImageCircle.Forms.Plugin.pri",
+        "lib/uap10.0.16299/ImageCircle.Forms.Plugin.xml",
+        "lib/xamarinios10/ImageCircle.Forms.Plugin.dll",
+        "lib/xamarinios10/ImageCircle.Forms.Plugin.pdb",
+        "lib/xamarinios10/ImageCircle.Forms.Plugin.xml",
+        "lib/xamarinmac20/ImageCircle.Forms.Plugin.dll",
+        "lib/xamarinmac20/ImageCircle.Forms.Plugin.pdb",
+        "lib/xamarinmac20/ImageCircle.Forms.Plugin.xml",
+        "xam.plugins.forms.imagecircle.3.1.1.1-beta.nupkg.sha512",
+        "xam.plugins.forms.imagecircle.nuspec"
       ]
     },
     "Xamarin.Essentials/1.7.0": {
@@ -536,6 +654,8 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
+      "Plugin.Fingerprint >= 3.0.0-beta.1",
+      "Xam.Plugins.Forms.ImageCircle >= 3.1.1.1-beta",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196"
     ]
@@ -547,11 +667,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj",
+      "projectUniqueName": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj",
       "projectName": "ScreenTemplate",
-      "projectPath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj",
+      "projectPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj",
       "packagesPath": "C:\\Users\\ahmad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmad\\Source\\Repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\obj\\",
+      "outputPath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -590,6 +710,14 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "Plugin.Fingerprint": {
+            "target": "Package",
+            "version": "[3.0.0-beta.1, )"
+          },
+          "Xam.Plugins.Forms.ImageCircle": {
+            "target": "Package",
+            "version": "[3.1.1.1-beta, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

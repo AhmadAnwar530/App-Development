@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "0zhCepKtvPC0WMztLttPfmKkrofcMcSEQ79B29+eqtGmUmoaZqxmb9kilrsgP/Pb7wXbuDU/NlH3vbo2FFtxug==",
+  "dgSpecHash": "bkvmYOu8kUYcdG6jBzcR9rh3ZqG7xeqHsWT5xAwTKrv8fkJH+S8MCRhXUJXlXt2dVWzMPh3dhTjEqCmKjcqZgQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmad\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\plugin.fingerprint\\3.0.0-beta.1\\plugin.fingerprint.3.0.0-beta.1.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.1.1.1-beta\\xam.plugins.forms.imagecircle.3.1.1.1-beta.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
