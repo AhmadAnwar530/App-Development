@@ -10,6 +10,7 @@ using ScreenTemplate.Views;
 using ScreenTemplate.Models;
 using ScreenTemplate.ViewModels;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace ScreenTemplate.Views
 {
@@ -43,7 +44,22 @@ namespace ScreenTemplate.Views
         {
             var menuItem = (MenuItem)sender;
             var todolist = menuItem.CommandParameter as ToDoListModel;
-            DisplayAlert(todolist.Title, todolist.Details, "Complete It!");
+            foreach (var item in myList.Where(i => i.Title == todolist.Title))
+            {
+                item.Details = "Not Done!";
+            }
+        }
+
+        private void myListView_Refreshing(object sender, EventArgs e)
+        {
+            myListView.ItemsSource = null;
+            myListView.ItemsSource = myList;
+            myListView.EndRefresh();
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+           myListView.ItemsSource =  myList.Where(i => i.Title.StartsWith(e.NewTextValue));
         }
     }
 }
