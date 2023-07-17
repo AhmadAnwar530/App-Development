@@ -17,7 +17,11 @@ namespace ScreenTemplate.Views
 		public userPage()
 		{
             InitializeComponent();
-            
+            // Retrieve the email and password from the database
+            var viewModel = new UserPageViewModel();
+            BindingContext = viewModel;
+
         }
+
 	}
 }

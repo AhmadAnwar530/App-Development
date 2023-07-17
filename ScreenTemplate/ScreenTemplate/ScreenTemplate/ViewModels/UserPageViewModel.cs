@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Xamarin.Forms;
 using ScreenTemplate.Views;
+using ScreenTemplate.Models;
+using ScreenTemplate.Models.ScreenTemplate.Data;
+using ScreenTemplate.ViewModels;
+using SQLite;
+using System;
 
 namespace ScreenTemplate.ViewModels
 {
-    
     public class UserPageViewModel : INotifyPropertyChanged
     {
         private string email;
         private string password;
-        public ICommand ProfileCommand { get; private set; }
-        public ICommand ToDoListCommand { get; private set; }       
+        private SQLiteConnection database;
 
         public string Email
         {
@@ -43,13 +43,19 @@ namespace ScreenTemplate.ViewModels
             }
         }
 
-        public UserPageViewModel(string email, string password)
+        public ICommand ProfileCommand { get; private set; }
+        public ICommand ToDoListCommand { get; private set; }
+
+        public UserPageViewModel()
         {
-            Email = email;
-            Password = password;
             ProfileCommand = new Command(ProfilePage);
             ToDoListCommand = new Command(ToDoList);
+            // Initialize the database connection
+            database = DependencyService.Get<ISQLiteDb>().GetConnection();
+
+            LoadUserData();
         }
+
         private void ProfilePage()
         {
             Application.Current.MainPage.Navigation.PushAsync(new Profile());
@@ -59,6 +65,29 @@ namespace ScreenTemplate.ViewModels
         {
             Application.Current.MainPage.Navigation.PushAsync(new ToDoList());
         }
+
+        private void LoadUserData()
+        {
+            try
+            {
+                // Retrieve the user data from the database
+                var user = database.Table<User>().FirstOrDefault();
+
+                if (user != null)
+                {
+                    // Set the email and password properties with the retrieved data
+                    Email = user.Email;
+                    Password = user.Password;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur during database operations
+                Console.WriteLine($"Error loading user data: {ex.Message}");
+                // You can display an error message or take other appropriate actions here
+            }
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -1,6 +1,9 @@
 FormsViewGroup.dll
 ImageCircle.Forms.Plugin.dll
 Plugin.Fingerprint.dll
+SQLite.Net.Platform.XamarinAndroid.dll
+SQLitePCLRaw.batteries_v2.dll
+SQLitePCLRaw.lib.e_sqlite3.android.dll
 Xamarin.AndroidX.Activity.dll
 Xamarin.AndroidX.Annotation.dll
 Xamarin.AndroidX.Annotation.Experimental.dll

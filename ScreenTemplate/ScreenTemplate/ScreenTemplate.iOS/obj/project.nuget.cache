@@ -1,14 +1,70 @@
 {
   "version": 2,
-  "dgSpecHash": "j6f3CtfnfnghcDOHedHh+63lR25qIVh7zQrI62ln1sG+ECzAaaiw0YfoVgDg55wh93uVQnQrPpgA+i541Byu6g==",
-  "success": true,
+  "dgSpecHash": "1SgVTjUXaduS6+VFvVs3Td+vJ4sDkdQu/JB6b7xovPrpRoPot27DBnP8M8RuQA1e7ox8//Fqt0EfNdXh2cCXig==",
+  "success": false,
   "projectFilePath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.iOS\\ScreenTemplate.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmad\\.nuget\\packages\\plugin.fingerprint\\3.0.0-beta.1\\plugin.fingerprint.3.0.0-beta.1.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlite-net-pcl\\1.9.141-beta\\sqlite-net-pcl.1.9.141-beta.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlite.net-pcl\\3.1.1\\sqlite.net-pcl.3.1.1.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlite.net.core-pcl\\3.1.1\\sqlite.net.core-pcl.3.1.1.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlite.net.platform.xamarinandroidn\\3.1.1\\sqlite.net.platform.xamarinandroidn.3.1.1.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.1.2\\sqlitepclraw.bundle_green.2.1.2.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlitepclraw.provider.sqlite3\\2.1.2\\sqlitepclraw.provider.sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.1.1.1-beta\\xam.plugins.forms.imagecircle.3.1.1.1-beta.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 supports: net (.NETFramework,Version=v0.0)",
+      "libraryId": "SQLite.Net.Platform.XamarinAndroidN",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 supports: net (.NETFramework,Version=v0.0)",
+      "libraryId": "SQLite.Net.Platform.XamarinAndroidN",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-arm64. Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 supports: net (.NETFramework,Version=v0.0)",
+      "libraryId": "SQLite.Net.Platform.XamarinAndroidN",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-arm64"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 supports: net (.NETFramework,Version=v0.0)",
+      "libraryId": "SQLite.Net.Platform.XamarinAndroidN",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 supports: net (.NETFramework,Version=v0.0)",
+      "libraryId": "SQLite.Net.Platform.XamarinAndroidN",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

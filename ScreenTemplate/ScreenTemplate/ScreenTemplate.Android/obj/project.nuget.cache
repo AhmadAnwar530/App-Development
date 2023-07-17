@@ -1,11 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "enIghLz13kLt7caiRGICrV1qy7csgHdE3qesfEqWAu5D7GH3lPVU5JHYI36kSmP0XEm7P6Cjw5PJF6ogjZQVJQ==",
+  "dgSpecHash": "3SqSzkhhBUX0ExhGOYlylnvNzqqLvXE3yTMQUX6Cu81+Q92kL0X4qQxYGBdLmLOle6wEMUMI6YePJ4WBwQGUZw==",
   "success": false,
   "projectFilePath": "C:\\Users\\ahmad\\source\\repos\\App-Development\\ScreenTemplate\\ScreenTemplate\\ScreenTemplate.Android\\ScreenTemplate.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmad\\.nuget\\packages\\plugin.fingerprint\\3.0.0-beta.1\\plugin.fingerprint.3.0.0-beta.1.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlite-net-pcl\\1.9.141-beta\\sqlite-net-pcl.1.9.141-beta.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlite.net-pcl\\3.1.1\\sqlite.net-pcl.3.1.1.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlite.net.core-pcl\\3.1.1\\sqlite.net.core-pcl.3.1.1.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlite.net.platform.xamarinandroidn\\3.1.1\\sqlite.net.platform.xamarinandroidn.3.1.1.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.1.2\\sqlitepclraw.bundle_green.2.1.2.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.1.2\\sqlitepclraw.lib.e_sqlite3.android.2.1.2.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.1.1.1-beta\\xam.plugins.forms.imagecircle.3.1.1.1-beta.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\xamarin.androidx.activity\\1.4.0.2\\xamarin.androidx.activity.1.4.0.2.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\xamarin.androidx.annotation\\1.3.0.3\\xamarin.androidx.annotation.1.3.0.3.nupkg.sha512",
@@ -81,6 +92,15 @@
       "level": "Error",
       "message": "Version conflict detected for Xamarin.AndroidX.Core. Install/reference Xamarin.AndroidX.Core 1.7.0.2 directly to project ScreenTemplate.Android to resolve this issue. \r\n ScreenTemplate.Android -> ScreenTemplate -> Plugin.Fingerprint 3.0.0-beta.1 -> Xamarin.AndroidX.Biometric 1.1.0.9 -> Xamarin.AndroidX.Core (>= 1.7.0.2) \r\n ScreenTemplate.Android -> Xamarin.Forms 5.0.0.2196 -> Xamarin.AndroidX.Core (>= 1.6.0.1 && < 1.7.0).",
       "libraryId": "Xamarin.AndroidX.Core",
+      "targetGraphs": [
+        "MonoAndroid,Version=v13.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 is not compatible with monoandroid13.0 (MonoAndroid,Version=v13.0). Package SQLite.Net.Platform.XamarinAndroidN 3.1.1 supports: net (.NETFramework,Version=v0.0)",
+      "libraryId": "SQLite.Net.Platform.XamarinAndroidN",
       "targetGraphs": [
         "MonoAndroid,Version=v13.0"
       ]

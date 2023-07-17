@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ScreenTemplate.Models;
+﻿using SQLite;
 
 namespace ScreenTemplate.Models
 {
     public class User
     {
-        public string Email { get; set; }  
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        public string Email { get; set; }
+
         public string Password { get; set; }
     }
 }

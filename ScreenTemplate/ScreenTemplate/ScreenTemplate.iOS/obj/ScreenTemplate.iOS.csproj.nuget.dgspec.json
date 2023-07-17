@@ -57,6 +57,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.141-beta, )"
             }
           }
         }
@@ -127,6 +131,14 @@
               "target": "Package",
               "version": "[3.0.0-beta.1, )"
             },
+            "SQLite.Net-PCL": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "SQLite.Net.Platform.XamarinAndroidN": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Xam.Plugins.Forms.ImageCircle": {
               "target": "Package",
               "version": "[3.1.1.1-beta, )"
@@ -138,6 +150,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.141-beta, )"
             }
           },
           "imports": [
