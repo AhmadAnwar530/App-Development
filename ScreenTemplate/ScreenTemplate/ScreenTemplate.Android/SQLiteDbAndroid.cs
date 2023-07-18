@@ -2,7 +2,7 @@
 using System.IO;
 using ScreenTemplate.Droid.Data;
 using Xamarin.Forms;
-using ScreenTemplate.Models.ScreenTemplate.Data;
+using ScreenTemplate.ViewModels;
 using ScreenTemplate.Models;
 
 [assembly: Dependency(typeof(SQLiteDbAndroid))]

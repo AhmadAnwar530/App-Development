@@ -4,7 +4,6 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using ScreenTemplate.Views;
 using ScreenTemplate.Models;
-using ScreenTemplate.Models.ScreenTemplate.Data;
 using ScreenTemplate.ViewModels;
 using SQLite;
 using System;
@@ -46,10 +45,13 @@ namespace ScreenTemplate.ViewModels
         public ICommand ProfileCommand { get; private set; }
         public ICommand ToDoListCommand { get; private set; }
 
+        public ICommand AddUserCommand { get; private set; }
+
         public UserPageViewModel()
         {
             ProfileCommand = new Command(ProfilePage);
             ToDoListCommand = new Command(ToDoList);
+            AddUserCommand = new Command(AddUserPage);
             // Initialize the database connection
             database = DependencyService.Get<ISQLiteDb>().GetConnection();
 
@@ -64,6 +66,11 @@ namespace ScreenTemplate.ViewModels
         private void ToDoList()
         {
             Application.Current.MainPage.Navigation.PushAsync(new ToDoList());
+        }
+
+        private void AddUserPage()
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new AddUser());
         }
 
         private void LoadUserData()
@@ -84,7 +91,7 @@ namespace ScreenTemplate.ViewModels
             {
                 // Handle any exceptions that occur during database operations
                 Console.WriteLine($"Error loading user data: {ex.Message}");
-                // You can display an error message or take other appropriate actions here
+
             }
         }
 

@@ -52,22 +52,31 @@
                    FontSize="25"
                    HorizontalOptions="Start"/>
           
-            <Button Grid.Row="2" Grid.ColumnSpan="1"
+            <Button Grid.Row="2" Grid.ColumnSpan="2"
                     Text="See your Profile"
                     BackgroundColor="#123261" 
                     CornerRadius="10"
                     BorderWidth="2"
                     FontSize="17"
-                    Margin="20,10,0,140"
+                    Margin="30,0,30,150"
                     Command="{Binding ProfileCommand}"/>
-            <Button Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1"
+            <Button Grid.Row="2" Grid.ColumnSpan="2" 
                     Text="To Do List"
                     BackgroundColor="#123261" 
                     CornerRadius="10"
                     BorderWidth="2"
                     FontSize="18"
-                    Margin="20,10,20,140"
+                    Margin="30,60,30,90"
                     Command="{Binding ToDoListCommand}"/>
+
+            <Button Grid.Row="2" Grid.ColumnSpan="2"
+                    Text="Add User"
+                    BackgroundColor="#123261" 
+                    CornerRadius="10"
+                    BorderWidth="2"
+                    FontSize="18"
+                    Margin="30,120,30,30"
+                    Command="{Binding AddUserCommand}"/>
 
             <Label Grid.Row="3" Grid.ColumnSpan="2" Text="All Rights Reserved!"
                    HorizontalOptions="Center"

@@ -32,3 +32,5 @@ C:\Users\ahmad\Source\Repos\App-Development\ScreenTemplate\ScreenTemplate\Screen
 C:\Users\ahmad\Source\Repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate\obj\Debug\netstandard2.0\Views\Profile.xaml.g.cs
 C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate\obj\Debug\netstandard2.0\Views\ToDoList.xaml.g.cs
+C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate\obj\Debug\netstandard2.0\Views\AddUser.xaml.g.cs
+C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate\obj\Debug\netstandard2.0\Views\EditUserPage.xaml.g.cs

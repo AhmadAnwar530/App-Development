@@ -1,5 +1,4 @@
 ﻿using ScreenTemplate.Models;
-using ScreenTemplate.Models.ScreenTemplate.Data;
 using ScreenTemplate.Views;
 using SQLite;
 using System;
@@ -25,25 +24,14 @@ namespace ScreenTemplate.ViewModels
             // Create the User table if it doesn't exist
             database.CreateTable<User>();
 
-            // Check if the user already exists in the database
-            //var existingUser = database.Table<User>().FirstOrDefault(u => u.Email == "belports.com");
-            //if (existingUser == null)
-            //{
-            //    // User does not exist, add it to the database
-            //    var newUser = new User { Email = "belports.com", Password = "123" };
-            //    database.Insert(newUser);
-            //}
-
             var existingUser = database.Table<User>().FirstOrDefault(u => u.Email == "belports.com");
             if (existingUser == null)
             {
                 // User does not exist, add it to the database
                 var newUser1 = new User { Email = "belports.com", Password = "123" };
-                var newUser2 = new User { Email = "ahmad123", Password = "123" };
-
+             
                 // Insert the new users into the database
                 database.Insert(newUser1);
-                database.Insert(newUser2);
             }
 
         }

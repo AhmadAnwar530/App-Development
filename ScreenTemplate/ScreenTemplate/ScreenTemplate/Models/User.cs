@@ -4,8 +4,7 @@ namespace ScreenTemplate.Models
 {
     public class User
     {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
+        [PrimaryKey]
 
         public string Email { get; set; }
 
