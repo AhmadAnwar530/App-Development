@@ -67,23 +67,25 @@ namespace ScreenTemplate.ViewModels
                 Application.Current.MainPage.DisplayAlert("Invalid", "Blank or whitespace value is invalid!", "OK");
                 return;
             }
-
-            var user = new User
+            else
             {
-                Email = Email,
-                Password = Password
-            };
 
-            database.Insert(user);
+                var user = new User
+                {
+                    Email = Email,
+                    Password = Password
+                };
 
-            // Reset the email and password fields
-            Email = string.Empty;
-            Password = string.Empty;
+                database.Insert(user);
 
-            // Refresh the list of users
-            RefreshUsers();
+                // Reset the email and password fields
+                Email = string.Empty;
+                Password = string.Empty;
+
+                // Refresh the list of users
+                RefreshUsers();
+            }
         }
-
         private async void EditUser(User user)
         {
             // Assuming you have a separate page for editing user details

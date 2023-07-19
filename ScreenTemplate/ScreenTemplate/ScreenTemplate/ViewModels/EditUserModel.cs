@@ -49,6 +49,10 @@ namespace ScreenTemplate.ViewModels
             CancelCommand = new Command(Cancel);
         }
 
+        //This is the constructor method for the EditUserModel class. It takes a parameter named user of type User. The user parameter represents the user object that will be edited.
+        //this.user = user;
+        //This assigns the user parameter to the user field of the class. It stores the user object that will be edited so that it can be accessed within other methods of the class.
+
         private void SaveChanges()
         {
             if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
@@ -56,16 +60,19 @@ namespace ScreenTemplate.ViewModels
                 Application.Current.MainPage.DisplayAlert("Invalid", "Blank or whitespace value is invalid!", "OK");
                 return;
             }
+            else
+            {
 
-            // Update the user data
-            user.Email = Email;
-            user.Password = Password;
+                // Update the user data
+                user.Email = Email;
+                user.Password = Password;
 
-            // Implement the logic to update the user data in the database
-            database.Update(user);
+                // Implement the logic to update the user data in the database
+                database.Update(user);
 
-            // Navigate back to the AddUserPage
-            Application.Current.MainPage.Navigation.PopAsync();
+                // Navigate back to the AddUserPage
+                Application.Current.MainPage.Navigation.PopAsync();
+            }
         }
 
         private void Cancel()

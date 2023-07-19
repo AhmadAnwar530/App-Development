@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ScreenTemplate.Models;clr-namespace:ScreenTemplate.ViewModels"
+             xmlns:local="clr-namespace:ScreenTemplate.Models;clr-namespace:ScreenTemplate.ViewModels;clr-namespace:ScreenTemplate"
              x:Class="ScreenTemplate.Views.MainPage"
-             BackgroundColor="#d7e8fa"
-             BindingContext="{local:LoginViewModel}">
+             BackgroundColor="#d7e8fa">
+    <!--BindingContext="{local:LoginViewModel}"-->
     
 
     <Grid>
@@ -24,27 +24,28 @@
                HorizontalOptions="Center"
                WidthRequest="250"/>
         
-        <Entry Margin="20,100,20,40" Grid.ColumnSpan="2" Grid.Row="1" Placeholder="E-mail"
-               BackgroundColor="white"
+        <local:MyEntry Margin="20,100,20,40" Grid.ColumnSpan="2" Grid.Row="1" Placeholder="E-mail"
                TextColor="black"
                PlaceholderColor="Gray"
+               CornerRadius="20"
                Text="{Binding Email, Mode=TwoWay}"/>
 
-        <Entry Margin="20,-10,20,150" Grid.ColumnSpan="2" Grid.Row="2" Placeholder="Password"
-               BackgroundColor="white"
+        <local:MyEntry Margin="20,-10,20,150" Grid.ColumnSpan="2" Grid.Row="2" Placeholder="Password"
                TextColor="black"
                PlaceholderColor="Gray"
                MaxLength="15"
+               CornerRadius="20"
                IsSpellCheckEnabled="false"
                IsTextPredictionEnabled="false"
                IsPassword="true"
                Text="{Binding Password, Mode=TwoWay}"/>
 
-        <Image Source="fingerprint.png" Grid.ColumnSpan="2" Grid.Row="2" HorizontalOptions="Center" WidthRequest="40"
+        <ImageButton Source="fingerprint.png" Grid.ColumnSpan="2" Grid.Row="2" HorizontalOptions="Center" WidthRequest="40"
+                     Command="{Binding CameraButtonCommand}"
              Margin="0,20,0,20" />
 
 
-        <Button Margin="120,40,120,90" Grid.Row="3" Grid.ColumnSpan="2" Text="Login" BackgroundColor="#123261" 
+        <local:RoundButton Margin="120,40,120,90" Grid.Row="3" Grid.ColumnSpan="2" Text="Login" BackgroundColor="#123261" 
                 CornerRadius="10"
                 WidthRequest="50"
                 HeightRequest="25"

@@ -1345,3 +1345,7 @@ C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\Screen
 C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\android\assets\System.Runtime.Extensions.dll
 C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\android\assets\System.Text.Encoding.dll
 C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\android\assets\System.Threading.dll
+C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\android\src\crc64937f823ac697369c\RoundButtonRenderer.java
+C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\android\src\crc6457358d127341f930\MyEntryRenderer.java
+C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\android\src\crc64937f823ac697369c\MyEntryRenderer.java
+C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate.Android\obj\Debug\130\android\src\crc6457358d127341f930\CameraPageRenderer.java

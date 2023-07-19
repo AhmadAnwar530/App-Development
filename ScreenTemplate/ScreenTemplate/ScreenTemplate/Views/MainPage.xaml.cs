@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ScreenTemplate.ViewModels;
 using Xamarin.Forms;
 using ScreenTemplate.Models;
 
@@ -14,11 +15,8 @@ namespace ScreenTemplate.Views
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new LoginViewModel();
         }
-        //async void OnDisplayAlertButtonClicked(object sender, EventArgs e)
-        //{
-        //    await DisplayAlert("Alert", "Successfully Logged In.", "OK");
-        //}
     }
    
 }

@@ -7,6 +7,7 @@ using ScreenTemplate.Models;
 using ScreenTemplate.ViewModels;
 using SQLite;
 using System;
+using Xamarin.Essentials;
 
 namespace ScreenTemplate.ViewModels
 {
@@ -103,4 +104,20 @@ namespace ScreenTemplate.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
+    //public event PropertyChangedEventHandler PropertyChanged;
+    //This line declares an event named PropertyChanged of a specific type called PropertyChangedEventHandler.
+    //An event is a way for one part of the code to notify other parts of the code when something important happens. 
+    //In this case, the event is used to notify subscribers (typically UI elements) that a property's value has changed.
+
+
+    //protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    //    This is a method that is called when a property's value has changed. It is responsible for raising the PropertyChanged event. 
+    //    The method has a parameter named propertyName, which represents the name of the property that has changed. 
+    //By using the [CallerMemberName] attribute, we don't need to explicitly pass the property name when calling this method—it will be automatically inferred based on the calling member's name.
+
+    //Inside the method, we check if there are any subscribers(i.e., if the PropertyChanged event is not null) using the null-conditional operator ?.. 
+    //    If there are subscribers, we invoke the PropertyChanged event by passing this (the current instance of the class) and a new instance of PropertyChangedEventArgs containing the propertyName.
+
+    //The purpose of raising the PropertyChanged event is to notify any subscribers (such as UI elements) that a specific property's value has changed. This allows them to update their visuals or perform any other
+    //    necessary actions based on the new value.
 }

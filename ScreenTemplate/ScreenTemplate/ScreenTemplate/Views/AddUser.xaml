@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns:viewModels="clr-namespace:ScreenTemplate.ViewModels"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ScreenTemplate"
              x:Class="ScreenTemplate.Views.AddUser"
-             xmlns:local="clr-namespace:ScreenTemplate.ViewModels"
              BackgroundColor="#d7e8fa">
+    
     <ContentPage.Content>
         
         <StackLayout Margin="30,0,30,0">
@@ -11,21 +13,21 @@
                HorizontalOptions="Center"
                WidthRequest="250"
                     />
-            <Entry TextColor="gray"
+            <local:MyEntry TextColor="gray"
                    PlaceholderColor="gray"
                    BackgroundColor="Transparent"
                 Placeholder="Email"
                    Text="{Binding Email}"
                    x:Name="emailEntry"/>
             
-            <Entry TextColor="gray"
+            <local:MyEntry TextColor="gray"
                    PlaceholderColor="gray"
                      Text="{Binding Password}"
                    BackgroundColor="Transparent" 
                 Placeholder="Password"
                    x:Name="passwordEntry"/>
 
-            <Button Text="Save"
+            <local:RoundButton Text="Save"
                      BackgroundColor="#123261" 
                     CornerRadius="10"
                     BorderWidth="2"
@@ -48,13 +50,13 @@
                             Text="Edit"
                             BackgroundColor="#123261"
                             CommandParameter="{Binding .}"
-                            Command="{Binding Source={RelativeSource AncestorType={x:Type local:AddUserViewModel}}, Path=EditCommand}"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:AddUserViewModel}}, Path=EditCommand}"
                             />
                                     <SwipeItem
                             Text="Delete"
                             BackgroundColor="#123261"
                             CommandParameter="{Binding .}"
-                            Command="{Binding Source={RelativeSource AncestorType={x:Type local:AddUserViewModel}}, Path=DeleteCommand}"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:AddUserViewModel}}, Path=DeleteCommand}"
                             />
                                 </SwipeItems>
                             </SwipeView.RightItems>

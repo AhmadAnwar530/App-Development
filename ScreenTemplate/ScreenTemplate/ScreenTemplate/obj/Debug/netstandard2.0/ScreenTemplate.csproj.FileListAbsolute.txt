@@ -34,3 +34,4 @@ C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\Screen
 C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate\obj\Debug\netstandard2.0\Views\ToDoList.xaml.g.cs
 C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate\obj\Debug\netstandard2.0\Views\AddUser.xaml.g.cs
 C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate\obj\Debug\netstandard2.0\Views\EditUserPage.xaml.g.cs
+C:\Users\ahmad\source\repos\App-Development\ScreenTemplate\ScreenTemplate\ScreenTemplate\obj\Debug\netstandard2.0\Views\CameraPage.xaml.g.cs
