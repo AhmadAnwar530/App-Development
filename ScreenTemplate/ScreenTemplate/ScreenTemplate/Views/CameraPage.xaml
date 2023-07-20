@@ -3,5 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScreenTemplate.Views.CameraPage">
     <ContentPage.Content>
-    </ContentPage.Content>
+
+        <StackLayout Margin="20,35,20,20">
+            <Label Text="Device Orientation"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Button Text="Get Device Orientation"
+                    Clicked="OnGetDeviceOrientationButtonClicked" />
+            <Label x:Name="orientationLabel"
+                   HorizontalOptions="Center" />
+
+            <Image x:Name="image" />
+
+            <Button Text="Pick Photo"
+        Clicked="OnPickPhotoButtonClicked" />
+
+        </StackLayout>
+        
+        
+        </ContentPage.Content>
 </ContentPage>

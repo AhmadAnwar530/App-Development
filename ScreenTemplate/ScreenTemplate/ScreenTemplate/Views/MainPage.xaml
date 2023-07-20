@@ -41,7 +41,7 @@
                Text="{Binding Password, Mode=TwoWay}"/>
 
         <ImageButton Source="fingerprint.png" Grid.ColumnSpan="2" Grid.Row="2" HorizontalOptions="Center" WidthRequest="40"
-                     Command="{Binding CameraButtonCommand}"
+                     Command="{Binding CameraButtonCommand}" BackgroundColor="Transparent"
              Margin="0,20,0,20" />
 
 

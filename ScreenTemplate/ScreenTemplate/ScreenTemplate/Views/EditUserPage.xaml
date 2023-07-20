@@ -13,12 +13,14 @@
             <local:MyEntry TextColor="gray"
                    PlaceholderColor="gray"
                    BackgroundColor="Transparent"
+                           CornerRadius="20"
                    Placeholder="Email"
                    Text="{Binding Email}" />
 
             <local:MyEntry TextColor="gray"
                    PlaceholderColor="gray"
                    Text="{Binding Password}"
+                           CornerRadius="20"
                    BackgroundColor="Transparent"
                    Placeholder="Password" />
 
@@ -26,6 +28,7 @@
                     BackgroundColor="#123261" 
                     CornerRadius="10"
                     BorderWidth="2"
+                               Margin="80,20,80,0"
                     FontSize="18"
                     CharacterSpacing="1"
                     Command="{Binding SaveChangesCommand}" />

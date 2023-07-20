@@ -79,11 +79,7 @@ namespace ScreenTemplate.ViewModels
                     // User credentials are valid, navigate to UserPage
                     Application.Current.MainPage.Navigation.PushAsync(new userPage());
                 }
-                else
-                {
-                    // Invalid credentials
-                    Application.Current.MainPage.DisplayAlert("Login Failed", "Invalid credentials. Please try again.", "OK");
-                }
+               
 
                 // Store the user data in the database
                 var newUser = new User { Email = Email, Password = Password };
@@ -91,8 +87,9 @@ namespace ScreenTemplate.ViewModels
             }
             catch (Exception ex)
             {
-                // Handle the exception (e.g., display an error message)
-                Application.Current.MainPage.DisplayAlert("Error", "An error occurred: " + ex.Message, "OK");
+
+                // Invalid credentials
+                Application.Current.MainPage.DisplayAlert("Login Failed", "Invalid credentials. Please try again.", "OK");
             }
         }
 
