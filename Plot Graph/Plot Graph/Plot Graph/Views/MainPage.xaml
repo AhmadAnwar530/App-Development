@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             x:Class="Plot_Graph.Views.MainPage"
+             BackgroundColor="CadetBlue">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Text="Plot a Graph"
+               HorizontalOptions="Center"
+               TextColor="White"
+               FontSize="50"
+               Margin="0,20,0,0"
+               FontAttributes="Bold"
+               />
+        
+        <Label  Grid.Row="0"
+                Text="Choose a File"
+                TextColor="white"
+                HorizontalOptions="Center"
+                Margin="0,110,0,0"
+                FontSize="25"/>
+        
+        <Button Text="Choose File"
+                Clicked="ChooseFileButton_Clicked"
+                TextColor="Black"
+                FontSize="18"
+                 Grid.Row="0"
+                HorizontalOptions="Center"
+                CornerRadius="15"
+                BackgroundColor="white"
+                 Margin="0,150,0,75"
+                WidthRequest="150"
+                FontAttributes="Bold"
+                />
+        <Label  Grid.Row="0"
+                x:Name="labelInfo"
+                TextColor="white"
+                HorizontalOptions="Center"
+                Margin="0,220,0,0"
+                FontSize="15"/>
+
+        <Label  Grid.Row="1"
+                Text="File Content"
+                TextColor="white"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                FontSize="18"/>
+
+        <Label  Grid.Row="1"
+                x:Name="labelContent"
+                Text="{Binding FileContent}"
+                TextColor="white"
+                Margin="20,0,0,0"
+                FontSize="15"/>
+
+        <!--<mc:ChartView x:Name="barChart" WidthRequest="300" HeightRequest="300" Grid.Row="1"/>-->
+
+        <oxy:PlotView x:Name="lineChartView"
+                      Grid.Row="1"
+                      HeightRequest="300"
+                      BackgroundColor="White" />
+
+
+
+
+
+
+
+
+
+    </Grid>
+
+</ContentPage>
