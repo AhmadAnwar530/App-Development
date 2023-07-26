@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 CloseWhenBackgroundIsClicked="False"
+    x:Class="NoWaste.View.Categories.AddCategoryPopup">
+    <StackLayout Padding="15"
+                 Margin="15"
+                 BackgroundColor="White"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Center">
+        <Entry
+                    Placeholder="Category Name"
+                    Text="{Binding Name}" />
+        <Button
+                    Text="{Binding SaveEditText}"
+                    Command="{Binding SaveCommand}" />
+                <Button
+                    IsVisible="{Binding IsDeleteShow}"
+                    Text="Delete"
+                    Command="{Binding DeleteCommand}" />
+        <Button
+                    Text="Cancel"
+                    Command="{Binding CancelCommand}" />
+        </StackLayout>
+</pages:PopupPage>

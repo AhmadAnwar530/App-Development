@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 CloseWhenBackgroundIsClicked="True"
+                 x:Class="NoWaste.View.Sort.SortPopup">
+    <StackLayout Padding="15"
+                 Margin="15"
+                 Spacing="0"
+                 BackgroundColor="White"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Center">
+        <Label Margin="0"
+                   FontSize="17"
+                   Text="Sort By"
+               FontAttributes="Bold"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" WidthRequest="150">
+            <CheckBox x:Name="nameCheck" CheckedChanged="Name_CheckedChanged" Margin="0" VerticalOptions="Center"/>
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="Name"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" WidthRequest="150">
+            <CheckBox x:Name="categoryCheck" CheckedChanged="Category_CheckedChanged" Margin="0" VerticalOptions="Center"/>
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="Category"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" WidthRequest="150">
+            <CheckBox x:Name="expiryCheck" CheckedChanged="Expiry_CheckedChanged" Margin="0" VerticalOptions="Center"/>
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="Expiry"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+
+        </StackLayout>
+        <Label Margin="0"
+                   FontSize="17"
+                   Text="Sort Order"
+               FontAttributes="Bold"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" WidthRequest="150">
+            <CheckBox x:Name="ascendingCheck" CheckedChanged="Ascending_CheckedChanged" Margin="0" VerticalOptions="Center"/>
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="Ascending"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" WidthRequest="150">
+            <CheckBox x:Name="descendingCheck" CheckedChanged="Descending_CheckedChanged" Margin="0" VerticalOptions="Center"/>
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="Descending"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+
+        </StackLayout>
+        <StackLayout Margin="0,20,0,10" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Button Clicked="Apply_Clicked" BackgroundColor="Green" Text="Apply" FontSize="18" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
+            <Button Clicked="Cancel_Clicked" BackgroundColor="Green" FontSize="18" FontAttributes="Bold" Text="Cancel"  TextColor="White"  HorizontalOptions="FillAndExpand" HeightRequest="50"/>
+
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>
