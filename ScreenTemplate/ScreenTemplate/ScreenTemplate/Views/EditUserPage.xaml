@@ -14,6 +14,13 @@
                    PlaceholderColor="gray"
                    BackgroundColor="Transparent"
                            CornerRadius="20"
+                   Placeholder="Name"
+                   Text="{Binding Name}" />
+
+            <local:MyEntry TextColor="gray"
+                   PlaceholderColor="gray"
+                   BackgroundColor="Transparent"
+                           CornerRadius="20"
                    Placeholder="Email"
                    Text="{Binding Email}" />
 

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 CloseWhenBackgroundIsClicked="True"
+                 x:Class="NoWaste.View.Settings.SettingsPopup">
+    <StackLayout Padding="15"
+                 Margin="15"
+                 BackgroundColor="White"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Center">
+        <Grid HeightRequest="50"
+                     >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Column="1"
+                   Margin="0"
+                   FontSize="17"
+                   Text="Settings"
+                FontAttributes="Bold"
+                   TextColor="Black"
+                HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            <Label
+                Grid.Column="2"
+                Padding="10"
+                   Margin="0"
+                   FontSize="17"
+                   Text="X"
+                FontAttributes="Bold"
+                   TextColor="Black"
+                HorizontalOptions="EndAndExpand"
+                   VerticalOptions="Center" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+                </Label>
+        </Grid>
+      
+        <StackLayout HeightRequest="50"
+                     Orientation="Horizontal">
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="Show Purchase Amount"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+            <Switch
+                IsToggled="{Binding IsPriceVisible}"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+        <StackLayout HeightRequest="50"
+                     Orientation="Horizontal">
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="Show Date Purchase"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+            <Switch
+                IsToggled="{Binding IsDatePurchaseVisible}"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+        <StackLayout HeightRequest="50"
+                     Orientation="Horizontal">
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="Hide Expired Items"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+            <Switch
+                IsToggled="{Binding IsHideExpiry}"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+        <StackLayout HeightRequest="50"
+                     Orientation="Horizontal">
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="Enable Expiry Alert"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+            <Switch
+                IsToggled="{Binding EnableAlert}"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+        <StackLayout HeightRequest="50"
+                     Orientation="Horizontal">
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="0"
+                   FontSize="17"
+                   Text="Expiry Notification Time"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+            <Picker Grid.Row="1"
+                                        Margin="0"
+                                        ItemsSource="{Binding Days}"
+                                        SelectedItem="{Binding ExpiryNotificationDays}"
+                                        TextColor="Black"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+        <StackLayout HeightRequest="50"
+                     Orientation="Horizontal">
+            <Label Margin="0"
+                   FontSize="17"
+                   Text="App Version"
+                   TextColor="Black"
+                   VerticalOptions="Center" />
+            <Label 
+                                        Margin="0"
+                                        FontSize="17"
+                   Text="{Binding AppVersion}"
+                                        TextColor="Black"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+        
+    </StackLayout>
+</pages:PopupPage>

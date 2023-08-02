@@ -79,7 +79,7 @@ namespace ScreenTemplate.ViewModels
             try
             {
                 // Retrieve the user data from the database
-                var user = database.Table<User>().FirstOrDefault();
+                var user = database.Table<UserData>().FirstOrDefault();
 
                 if (user != null)
                 {

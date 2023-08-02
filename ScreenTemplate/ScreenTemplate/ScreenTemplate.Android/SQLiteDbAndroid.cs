@@ -13,10 +13,11 @@ namespace ScreenTemplate.Droid.Data
     {
         public SQLiteConnection GetConnection()
         {
-            var dbName = "UserCredentials.db3";
+            var dbName = "UserCredentials.db4";
             var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), dbName);
             var connection = new SQLiteConnection(dbPath);
-            connection.CreateTable<User>();
+            //connection.CreateTable<User>();
+            connection.CreateTable<UserData>();
 
             return connection;
 

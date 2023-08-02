@@ -8,11 +8,21 @@ namespace ScreenTemplate.ViewModels
 {
     public class EditUserModel : BaseViewModel, INotifyPropertyChanged
     {
+        private string name;
         private string email;
         private string password;
         private SQLiteConnection database;
-        private User user;
+        private UserData user;
 
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                OnPropertyChanged(nameof(Name));
+            }
+        }
         public string Email
         {
             get { return email; }
@@ -36,12 +46,13 @@ namespace ScreenTemplate.ViewModels
         public ICommand SaveChangesCommand { get; private set; }
         public ICommand CancelCommand { get; private set; }
 
-        public EditUserModel(User user)
+        public EditUserModel(UserData user)
         {
             database = DependencyService.Get<ISQLiteDb>().GetConnection();
             this.user = user;
 
             // Set the initial email and password values
+            Name = user.Name;
             Email = user.Email;
             Password = user.Password;
 
@@ -64,6 +75,7 @@ namespace ScreenTemplate.ViewModels
             {
 
                 // Update the user data
+                user.Name = Name;
                 user.Email = Email;
                 user.Password = Password;
 

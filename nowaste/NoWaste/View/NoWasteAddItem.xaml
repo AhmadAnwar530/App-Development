@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NoWaste.NoWasteAddItem"
+    Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            IconImageSource="scan.png"
+            Command="{Binding ScanCommand}" />
+
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="auto" />
+                <RowDefinition
+                    Height="auto" />
+                <RowDefinition
+                    Height="auto" />
+                <RowDefinition
+                    Height="auto" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Text="Category"
+                Margin="20,20,20,0" />
+            <StackLayout Margin="20,0" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Picker
+                
+                
+                HorizontalOptions="FillAndExpand"
+                IsEnabled="{Binding IsEditable}"
+                Title="Select Category"
+                ItemsSource="{Binding Categories}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding SelectedCategory}"
+                SelectedIndexChanged="Picker_SelectedIndexChanged" />
+                <Button
+                    Command="{Binding CategoryAddCommand}"
+                    IsVisible="{Binding IsAddCategoryShow}"
+                    Text="ADD"
+                    HorizontalOptions="End" />
+                <Button
+                    Command="{Binding CategoryUpdateCommand}"
+                    IsVisible="{Binding IsUpdateCategoryShow}"
+                    Text="UPDATE"
+                    HorizontalOptions="End" />
+            </StackLayout>
+            <Label
+                Grid.Row="2"
+                Margin="20,0"
+                Text="Name" />
+            <Entry
+                x:Name="NameEntry"
+                Margin="20,0"
+                Grid.Row="2"
+                TextChanged="SearchBar_OnTextChanged"
+                IsEnabled="{Binding IsEditable}"
+                Text="{Binding Item.Name}" />
+
+            <Label
+                Grid.Row="3"
+                Margin="20,-5"
+                Text="Amount" />
+            <Entry
+                x:Name="PurchaseAmountEntry"
+                Keyboard="Numeric"
+                Margin="20,20"
+                Grid.Row="3"
+                TextChanged="SearchBar_OnTextChanged"
+                IsEnabled="{Binding IsEditable}"
+                Text="{Binding Item.PurchaseAmount}" />
+
+            <StackLayout
+                Grid.Row="4"
+                Margin="20,0,20,20"
+                VerticalOptions="StartAndExpand">
+
+                <Label
+                    Text="Purchase" />
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    Padding="0">
+                    <DatePicker
+                        x:Name="DatePurchaseEntry"
+                        IsEnabled="{Binding IsEditable}"
+                        Date="{Binding Item.DatePurchase}"
+                        DateSelected="PurchaseDate_DateSelected" />
+                    <Label
+                        Margin="20,0,0,0"
+                        VerticalOptions="Center"
+                        Text="{Binding PurchaseDaysText}" />
+                </StackLayout>
+
+
+                <Label
+                    Text="Expiry" />
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    Padding="0">
+                    <DatePicker
+                        x:Name="date"
+                        IsEnabled="{Binding IsEditable}"
+                        Date="{Binding Item.Expiry}"
+                        DateSelected="Date_DateSelected" />
+                    <Label
+                        Margin="20,0,0,0"
+                        VerticalOptions="Center"
+                        Text="{Binding DaysText}" />
+                </StackLayout>
+                <Label
+                    Text="Barcode" />
+                <Entry
+                    IsEnabled="{Binding IsEditable}"
+                    Text="{Binding Item.Barcode}" />
+                <Button
+                    Text="{Binding SaveEditText}"
+                    Command="{Binding SaveCommand}" />
+                <Button
+                    IsVisible="{Binding ShowDelete}"
+                    Text="Delete"
+                    Command="{Binding DeleteCommand}" />
+            </StackLayout>
+            <ListView
+                Grid.Row="4"
+                RowHeight="40"
+                x:Name="namesListView"
+                IsVisible="False"
+                CachingStrategy="RecycleElement"
+                BackgroundColor="White"
+                ItemTapped="ListView_OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label
+                                HeightRequest="40"
+                                MinimumHeightRequest="40"
+                                Margin="20,0"
+                                VerticalTextAlignment="Center"
+                                VerticalOptions="CenterAndExpand"
+                                Text="{Binding .}"
+                                FontSize="16"
+                                TextColor="Black" />
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

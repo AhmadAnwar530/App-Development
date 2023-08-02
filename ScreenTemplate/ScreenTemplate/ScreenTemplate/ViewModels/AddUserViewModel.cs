@@ -12,8 +12,8 @@ namespace ScreenTemplate.ViewModels
     public class AddUserViewModel : BaseViewModel, INotifyPropertyChanged
     {
         // Display List of Users
-        private ObservableCollection<User> users;
-        public ObservableCollection<User> Users
+        private ObservableCollection<UserData> users;
+        public ObservableCollection<UserData> Users
         {
             get { return users; }
             set
@@ -22,13 +22,22 @@ namespace ScreenTemplate.ViewModels
                 OnPropertyChanged(nameof(Users));
             }
         }
-
+        private string name;
         private string email;
         private string password;
         private SQLiteConnection database;
         public ICommand EditCommand { get; private set; }
         public ICommand DeleteCommand { get; private set; }
 
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                OnPropertyChanged(nameof(Name));
+            }
+        }
         public string Email
         {
             get { return email; }
@@ -55,8 +64,8 @@ namespace ScreenTemplate.ViewModels
         {
             database = DependencyService.Get<ISQLiteDb>().GetConnection();
             SaveCommand = new Command(SaveUser);
-            EditCommand = new Command<User>(EditUser);
-            DeleteCommand = new Command<User>(DeleteUser);
+            EditCommand = new Command<UserData>(EditUser);
+            DeleteCommand = new Command<UserData>(DeleteUser);
             //RefreshUsers();
         }
 
@@ -70,8 +79,9 @@ namespace ScreenTemplate.ViewModels
             else
             {
 
-                var user = new User
+                var user = new UserData
                 {
+                    Name = Name,
                     Email = Email,
                     Password = Password
                 };
@@ -79,6 +89,7 @@ namespace ScreenTemplate.ViewModels
                 database.Insert(user);
 
                 // Reset the email and password fields
+                Name = string.Empty;
                 Email = string.Empty;
                 Password = string.Empty;
 
@@ -86,13 +97,13 @@ namespace ScreenTemplate.ViewModels
                 RefreshUsers();
             }
         }
-        private async void EditUser(User user)
+        private async void EditUser(UserData user)
         {
             // Assuming you have a separate page for editing user details
             await Application.Current.MainPage.Navigation.PushAsync(new EditUserPage(user));
         }
 
-        private async void DeleteUser(User user)
+        private async void DeleteUser(UserData user)
         {
             bool answer = await Application.Current.MainPage.DisplayAlert("Delete User", "Are you sure you want to delete this user?", "Yes", "No");
 
@@ -110,7 +121,7 @@ namespace ScreenTemplate.ViewModels
 
         public void RefreshUsers()
         {
-            Users = new ObservableCollection<User>(database.Table<User>().ToList());
+            Users = new ObservableCollection<UserData>(database.Table<UserData>().ToList());
             OnPropertyChanged(nameof(Users)); // Raise PropertyChanged event for the Users property
         }
 

@@ -11,14 +11,14 @@ namespace ScreenTemplate.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private User user;
+        private UserData user;
         private ICommand loginCommand;
         private ICommand cameraButtonCommand;
         private SQLiteConnection database;
 
         public LoginViewModel()
         {
-            user = new User();
+            user = new UserData();
             loginCommand = new Command(Login);
 
             cameraButtonCommand = new Command(CameraButton);
@@ -27,13 +27,13 @@ namespace ScreenTemplate.ViewModels
             database = DependencyService.Get<ISQLiteDb>().GetConnection();
 
             // Create the User table if it doesn't exist
-            database.CreateTable<User>();
+            database.CreateTable<UserData>();
 
-            var existingUser = database.Table<User>().FirstOrDefault(u => u.Email == "belports.com");
+            var existingUser = database.Table<UserData>().FirstOrDefault(u => u.Email == "belports.com");
             if (existingUser == null)
             {
                 // User does not exist, add it to the database
-                var newUser1 = new User { Email = "belports.com", Password = "123" };
+                var newUser1 = new UserData { Name = "belports",Email = "belports.com", Password = "123" };
              
                 // Insert the new users into the database
                 database.Insert(newUser1);
@@ -44,6 +44,15 @@ namespace ScreenTemplate.ViewModels
             //        existingUser.Otherwise, existingUser is set to null.
         }
 
+        public string Name
+        {
+            get { return user.Name; }
+            set
+            {
+                user.Name = value;
+                OnPropertyChanged(nameof(Name));
+            }
+        }
         public string Email
         {
             get { return user.Email; }
@@ -72,7 +81,7 @@ namespace ScreenTemplate.ViewModels
         {
             try
             {
-                var retrievedUser = database.Table<User>().FirstOrDefault(u => u.Email == Email);
+                var retrievedUser = database.Table<UserData>().FirstOrDefault(u => u.Email == Email);
 
                 if (retrievedUser != null && retrievedUser.Password == Password)
                 {
@@ -82,7 +91,7 @@ namespace ScreenTemplate.ViewModels
                
 
                 // Store the user data in the database
-                var newUser = new User { Email = Email, Password = Password };
+                var newUser = new UserData { Name = Name ,Email = Email, Password = Password };
                 database.InsertOrReplace(newUser);
             }
             catch (Exception ex)

@@ -9,9 +9,9 @@ namespace ScreenTemplate.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditUserPage : ContentPage
     {
-        private readonly User user;
+        private readonly UserData user;
 
-        public EditUserPage(User user)
+        public EditUserPage(UserData user)
         {
             InitializeComponent();
             this.user = user;
