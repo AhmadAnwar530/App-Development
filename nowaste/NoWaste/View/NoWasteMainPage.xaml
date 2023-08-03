@@ -61,16 +61,19 @@
                     Value="Black" />
                 <Setter
                     Property="Margin"
-                    Value="20,-40,0,0" />
+                    Value="-40,-40,0,0" />
                 <Setter
                     Property="FontSize"
-                    Value="16" />
+                    Value="14" />
+                <Setter
+                    Property="LineBreakMode"
+                    Value="NoWrap" />
                 <Setter
                     Property="HorizontalOptions"
-                    Value="Center" />
+                    Value="FillAndExpand" />
                 <Setter
                     Property="VerticalOptions"
-                    Value="Center" />
+                    Value="FillAndExpand" />
                 <Setter
                     Property="HorizontalTextAlignment"
                     Value="Center" />
@@ -80,6 +83,7 @@
             </Style>
             <local:ExpiryConverter
                 x:Key="expiry" />
+            <local:InvertBooleanConverter x:Key="invertBoolean" />
 
 
             <DataTemplate
@@ -113,6 +117,7 @@
                         <Label
                             Grid.Row="0"
                             Grid.Column="0"
+                            Grid.ColumnSpan="2"
                             Style="{StaticResource ItemLabel}"
                             Text="{Binding Name}" />
 
@@ -185,7 +190,47 @@
                             Grid.Column="0"
                             Grid.ColumnSpan="4"
                             Color="DarkGray" />
-                    </Grid>
+
+                            <BoxView WidthRequest="10" HeightRequest="10" Grid.Column="0" Grid.Row="0" Margin="5,5,0,0" HorizontalOptions="Start" VerticalOptions="Start">
+                                <BoxView.Triggers>
+                                    <DataTrigger
+                                            Binding="{Binding IsExpired}"
+                                            TargetType="BoxView"
+                                            Value="True">
+                                        <Setter
+                                            Property="Color"
+                                            Value="Red" />
+                                        <Setter
+                                            Property="CornerRadius"
+                                            Value="10" />   
+                                    </DataTrigger>
+                                    <DataTrigger
+                                            Binding="{Binding IsExpiringSoon}"
+                                            TargetType="BoxView"
+                                            Value="True">
+                                        <Setter
+                                            Property="Color"
+                                            Value="Orange" />
+                                        <Setter
+                                            Property="CornerRadius"
+                                            Value="10" />       
+                                    </DataTrigger>
+                                    <DataTrigger
+                                            Binding="{Binding IsExpiringSoon, Converter={StaticResource invertBoolean}}"
+                                            TargetType="BoxView"
+                                            Value="True">
+                                        <Setter
+                                            Property="Color"
+                                            Value="Green" />
+                                        <Setter
+                                            Property="CornerRadius"
+                                            Value="10" />   
+                                    </DataTrigger>
+                                </BoxView.Triggers>
+                            </BoxView>
+
+
+                        </Grid>
                     </Frame>
                 </ViewCell>
             </DataTemplate>
@@ -222,6 +267,7 @@
                             <Label
                             Grid.Row="0"
                             Grid.Column="0"
+                                Grid.ColumnSpan="2"
                             Style="{StaticResource ItemLabel}"
                             Text="{Binding Name}" />
 
@@ -294,6 +340,43 @@
                             Grid.Column="0"
                             Grid.ColumnSpan="4"
                             Color="DarkGray" />
+                            <BoxView WidthRequest="10" HeightRequest="10" Grid.Column="0" Grid.Row="0" Margin="5,5,0,0" HorizontalOptions="Start" VerticalOptions="Start">
+                                <BoxView.Triggers>
+                                    <DataTrigger
+                                            Binding="{Binding IsExpired}"
+                                            TargetType="BoxView"
+                                            Value="True">
+                                        <Setter
+                                            Property="Color"
+                                            Value="Red" />
+                                        <Setter
+                                            Property="CornerRadius"
+                                            Value="10" />
+                                    </DataTrigger>
+                                    <DataTrigger
+                                            Binding="{Binding IsExpiringSoon}"
+                                            TargetType="BoxView"
+                                            Value="True">
+                                        <Setter
+                                            Property="Color"
+                                            Value="OrangeRed" />
+                                        <Setter
+                                            Property="CornerRadius"
+                                            Value="10" />
+                                    </DataTrigger>
+                                    <DataTrigger
+                                            Binding="{Binding IsExpiringSoon, Converter={StaticResource invertBoolean}}"
+                                            TargetType="BoxView"
+                                            Value="True">
+                                        <Setter
+                                            Property="Color"
+                                            Value="Green" />
+                                        <Setter
+                                            Property="CornerRadius"
+                                            Value="10" />
+                                    </DataTrigger>
+                                </BoxView.Triggers>
+                            </BoxView>
                         </Grid>
                     </Frame>
                 </ViewCell>

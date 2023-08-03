@@ -146,7 +146,9 @@
       <Name>NoWaste.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\meat.png" />
+  </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\setting.png" />
     <BundleResource Include="Resources\sort.png" />
@@ -154,6 +156,21 @@
     <BundleResource Include="Resources\plus.png" />
     <BundleResource Include="Resources\splash.png" />
     <BundleResource Include="Resources\scan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bakery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\grains.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fruits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\general.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\milk.png" />
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
