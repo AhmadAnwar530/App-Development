@@ -61,10 +61,10 @@
                     Value="Black" />
                 <Setter
                     Property="Margin"
-                    Value="0" />
+                    Value="20,-40,0,0" />
                 <Setter
                     Property="FontSize"
-                    Value="14" />
+                    Value="16" />
                 <Setter
                     Property="HorizontalOptions"
                     Value="Center" />
@@ -85,7 +85,7 @@
             <DataTemplate
                 x:Key="evenTemplate">
                 <ViewCell>
-
+                    <Frame BackgroundColor="#dbdbdb" Margin="20,5,20,5" Padding="1" CornerRadius="15">
                     <Grid
                         
                         x:Name="evenGrid"
@@ -118,30 +118,46 @@
 
                         <Label
                             Grid.Row="0"
-                            Grid.Column="2"
-                            Text="{Binding CategoryName}"
-                            Style="{StaticResource ItemLabel}" />
-
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Text="{Binding PurchaseAmount}"
-                            Style="{StaticResource ItemLabel}"
-                            IsVisible="{Binding BindingContext.IsPriceVisible, Source={x:Reference NoWasteMainPageInstance}}" />
-
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="3"
-                            Text="{Binding DatePurchase, Converter={StaticResource expiry}}"
-                            Style="{StaticResource ItemLabel}"
-                            IsVisible="{Binding BindingContext.IsDatePurchaseVisible, Source={x:Reference NoWasteMainPageInstance}}" />
-
-
-                        <Label
-                            Grid.Row="0"
                             Grid.Column="4"
-                            Text="{Binding Expiry, Converter={StaticResource expiry}}"
-                            Style="{StaticResource ItemLabel}">
+                            Text="{Binding CategoryName}"
+                            FontSize="10"
+                            TextColor="Gray"
+                            Margin="0,17,10,0"
+                            />
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontSize="13"
+                                TextColor="Gray"
+                                Margin="20,17,0,0"
+                                IsVisible="{Binding BindingContext.IsPriceVisible, Source={x:Reference NoWasteMainPageInstance}}">
+                                <Label.Text>
+                                    <Binding Path="PurchaseAmount" StringFormat="Rs. {0}" />
+                                </Label.Text>
+                            </Label>
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="3"
+                                Grid.ColumnSpan="2"
+                              Margin="20,50,10,0"
+                                FontSize="11"
+                                IsVisible="{Binding BindingContext.IsDatePurchaseVisible, Source={x:Reference NoWasteMainPageInstance}}">   
+                                <Label.Text>
+                                    <Binding Path="DatePurchase" Converter="{StaticResource expiry}" StringFormat="Purchase Date: {0}"/>
+                                </Label.Text>
+                            </Label>
+
+
+                            <Label
+                                   Grid.Row="0"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Margin="20,50,0,0">
+                                <Label.Text>
+                                    <Binding Path="Expiry" Converter="{StaticResource expiry}" StringFormat="Expiry Date: {0}"/>
+                                </Label.Text>
                             <Label.Triggers>
                                 <DataTrigger
                                     Binding="{Binding IsExpiringSoon}"
@@ -170,92 +186,116 @@
                             Grid.ColumnSpan="4"
                             Color="DarkGray" />
                     </Grid>
+                    </Frame>
                 </ViewCell>
             </DataTemplate>
+
+
             <DataTemplate
                 x:Key="unevenTemplate">
                 <ViewCell>
-                    <Grid
-                        BackgroundColor="WhiteSmoke">
-                        <Grid.RowDefinitions>
-                            <RowDefinition
+                    <Frame BackgroundColor="#dbdbdb" Margin="20,5,20,5" Padding="1" CornerRadius="15">
+                        <Grid
+                        
+                        x:Name="evenGrid"
+                        BackgroundColor="#dbdbdb">
+                            <Grid.RowDefinitions>
+                                <RowDefinition
                                 Height="*" />
-                            <RowDefinition
+                                <RowDefinition
                                 Height="1" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition
                                 Width="*" />
-                            <ColumnDefinition
+                                <ColumnDefinition
                                 Width="*" />
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition
+                                <ColumnDefinition
                                 Width="*" />
-                            <ColumnDefinition
+                                <ColumnDefinition
                                 Width="*" />
-                        </Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                Width="*" />
 
-                        <Label
+                            </Grid.ColumnDefinitions>
+
+                            <Label
                             Grid.Row="0"
                             Grid.Column="0"
-                            Text="{Binding Name}"
-                            Style="{StaticResource ItemLabel}" />
-
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="2"
-                            Text="{Binding CategoryName}"
-                            Style="{StaticResource ItemLabel}" />
-
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Text="{Binding PurchaseAmount}"
                             Style="{StaticResource ItemLabel}"
-                            IsVisible="{Binding BindingContext.IsPriceVisible, Source={x:Reference NoWasteMainPageInstance}}" />
+                            Text="{Binding Name}" />
 
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="3"
-                            Text="{Binding DatePurchase, Converter={StaticResource expiry}}"
-                            Style="{StaticResource ItemLabel}"
-                            IsVisible="{Binding BindingContext.IsDatePurchaseVisible, Source={x:Reference NoWasteMainPageInstance}}" />
-
-
-                        <Label
+                            <Label
                             Grid.Row="0"
                             Grid.Column="4"
-                            Text="{Binding Expiry, Converter={StaticResource expiry}}"
-                            Style="{StaticResource ItemLabel}">
-                            <Label.Triggers>
-                                <DataTrigger
+                            Text="{Binding CategoryName}"
+                            FontSize="10"
+                            TextColor="Gray"
+                            Margin="0,17,10,0"
+                            />
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontSize="13"
+                                TextColor="Gray"
+                                Margin="20,17,0,0"
+                                IsVisible="{Binding BindingContext.IsPriceVisible, Source={x:Reference NoWasteMainPageInstance}}">
+                                <Label.Text>
+                                    <Binding Path="PurchaseAmount" StringFormat="Rs. {0}" />
+                                </Label.Text>
+                            </Label>
+
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="3"
+                                Grid.ColumnSpan="2"
+                              Margin="20,50,10,0"
+                                FontSize="11"
+                                IsVisible="{Binding BindingContext.IsDatePurchaseVisible, Source={x:Reference NoWasteMainPageInstance}}">
+                                <Label.Text>
+                                    <Binding Path="DatePurchase" Converter="{StaticResource expiry}" StringFormat="Purchase Date: {0}"/>
+                                </Label.Text>
+                            </Label>
+
+
+                            <Label
+                                   Grid.Row="0"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Margin="20,50,0,0">
+                                <Label.Text>
+                                    <Binding Path="Expiry" Converter="{StaticResource expiry}" StringFormat="Expiry Date: {0}"/>
+                                </Label.Text>
+                                <Label.Triggers>
+                                    <DataTrigger
                                     Binding="{Binding IsExpiringSoon}"
                                     TargetType="Label"
                                     Value="True">
-                                    <Setter
+                                        <Setter
                                         Property="TextColor"
                                         Value="Orange" />
 
-                                </DataTrigger>
-                                <DataTrigger
+                                    </DataTrigger>
+                                    <DataTrigger
                                     Binding="{Binding IsExpired}"
                                     TargetType="Label"
                                     Value="True">
-                                    <Setter
+                                        <Setter
                                         Property="TextColor"
                                         Value="Red" />
 
-                                </DataTrigger>
-                            </Label.Triggers>
-                        </Label>
-                        <BoxView
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                            <BoxView
                             HeightRequest="1"
                             Grid.Row="1"
                             Grid.Column="0"
                             Grid.ColumnSpan="4"
                             Color="DarkGray" />
-
-                    </Grid>
+                        </Grid>
+                    </Frame>
                 </ViewCell>
             </DataTemplate>
             <local:AlternateColorDataTemplateSelector
@@ -323,7 +363,7 @@
                     Grid.Column="3"
                     Text="Purchase"
                     Style="{StaticResource Headers}"
-                    IsVisible="{Binding BindingContext.IsDatePurchaseVisible, Source={x:Reference NoWasteMainPageInstance}}" />   
+                    IsVisible="{Binding BindingContext.IsDatePurchaseVisible, Source={x:Reference NoWasteMainPageInstance}}" />
 
                 <Label
                     Grid.Row="1"
@@ -451,13 +491,14 @@
                 x:Name="listView"
                 ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
                 ItemsSource="{Binding ItemsList}"
-                ItemTapped="listView_ItemTapped">
+                ItemTapped="listView_ItemTapped"
+                 RowHeight="110">
 
             </ListView>
         </StackLayout>
         <Frame
             Padding="0"
-            Margin="20"
+            Margin="20,0,20,90"
             CornerRadius="30"
             HeightRequest="60"
             WidthRequest="60"
@@ -479,7 +520,8 @@
             Text="Share List"
         Clicked="ExportButton_Clicked" 
           HorizontalOptions="Center"
-                Margin="0,500,0,210"
+               Margin="30,0,30,10"
+                VerticalOptions="EndAndExpand"
                 WidthRequest="350"
                 TextColor="white"
                 CharacterSpacing="1"

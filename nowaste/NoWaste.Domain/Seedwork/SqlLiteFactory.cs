@@ -9,7 +9,7 @@ namespace NoWaste.Domain.Seedwork
 {
     public class SqlLiteFactory
     {
-        public static string dbName = "NoWaste.db4";
+        public static string dbName = "NoWaste.db";
         static string _dbPath;
 
         public static string DbPath { get => _dbPath; }
