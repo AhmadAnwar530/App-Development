@@ -25,6 +25,31 @@ namespace NoWaste.Models
             set => SetProperty(ref _categoryName, value);
         }
 
+        string _categoryImage;
+        public string CategoryImage
+        {
+            get
+            {
+                switch (CategoryName)
+                {
+                    case "General":
+                        return "general.png";
+                    case "Dairy":
+                        return "milk.png";
+                    case "Fruits & Vegetables":
+                        return "fruits.png";
+                    case "Grains & Cereal":
+                        return "grains.png";
+                    case "Bakery":
+                        return "bakery.png";
+                    case "Meat & Fish":
+                        return "meat.png";
+                    default:
+                        return "general.png";
+                }
+            }
+        }
+
         int _categoryId;
         public int CategoryId
         {

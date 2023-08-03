@@ -121,21 +121,23 @@
                             Style="{StaticResource ItemLabel}"
                             Text="{Binding Name}" />
 
-                        <Label
+                        <Image
                             Grid.Row="0"
                             Grid.Column="4"
-                            Text="{Binding CategoryName}"
-                            FontSize="10"
-                            TextColor="Gray"
+                            Source="{Binding CategoryImage}"   
+                            Aspect="AspectFit"
+                            WidthRequest="20"
+                            HeightRequest="20"
                             Margin="0,17,10,0"
                             />
 
                             <Label
                                 Grid.Row="0"
                                 Grid.Column="1"
+                                Grid.ColumnSpan="2"
                                 FontSize="13"
                                 TextColor="Gray"
-                                Margin="20,17,0,0"
+                                Margin="20,18,0,0"
                                 IsVisible="{Binding BindingContext.IsPriceVisible, Source={x:Reference NoWasteMainPageInstance}}">
                                 <Label.Text>
                                     <Binding Path="PurchaseAmount" StringFormat="Rs. {0}" />
@@ -144,9 +146,9 @@
 
                             <Label
                                 Grid.Row="0"
-                                Grid.Column="3"
+                                Grid.Column="2"
                                 Grid.ColumnSpan="2"
-                              Margin="20,50,10,0"
+                              Margin="20,55,10,0"
                                 FontSize="11"
                                 IsVisible="{Binding BindingContext.IsDatePurchaseVisible, Source={x:Reference NoWasteMainPageInstance}}">   
                                 <Label.Text>
@@ -159,7 +161,8 @@
                                    Grid.Row="0"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="2"
-                                Margin="20,50,0,0">
+                                FontSize="13"
+                                Margin="25,55,0,0">
                                 <Label.Text>
                                     <Binding Path="Expiry" Converter="{StaticResource expiry}" StringFormat="Expiry Date: {0}"/>
                                 </Label.Text>
@@ -202,7 +205,7 @@
                                             Value="Red" />
                                         <Setter
                                             Property="CornerRadius"
-                                            Value="10" />   
+                                            Value="10" />
                                     </DataTrigger>
                                     <DataTrigger
                                             Binding="{Binding IsExpiringSoon}"
@@ -213,7 +216,7 @@
                                             Value="Orange" />
                                         <Setter
                                             Property="CornerRadius"
-                                            Value="10" />       
+                                            Value="10" />
                                     </DataTrigger>
                                     <DataTrigger
                                             Binding="{Binding IsExpiringSoon, Converter={StaticResource invertBoolean}}"
@@ -224,12 +227,10 @@
                                             Value="Green" />
                                         <Setter
                                             Property="CornerRadius"
-                                            Value="10" />   
+                                            Value="10" />
                                     </DataTrigger>
                                 </BoxView.Triggers>
                             </BoxView>
-
-
                         </Grid>
                     </Frame>
                 </ViewCell>
@@ -271,21 +272,23 @@
                             Style="{StaticResource ItemLabel}"
                             Text="{Binding Name}" />
 
-                            <Label
+                            <Image
                             Grid.Row="0"
                             Grid.Column="4"
-                            Text="{Binding CategoryName}"
-                            FontSize="10"
-                            TextColor="Gray"
+                            Source="{Binding CategoryImage}"   
+                            Aspect="AspectFit"
+                            WidthRequest="20"
+                            HeightRequest="20"
                             Margin="0,17,10,0"
                             />
 
                             <Label
                                 Grid.Row="0"
                                 Grid.Column="1"
+                                Grid.ColumnSpan="2"
                                 FontSize="13"
                                 TextColor="Gray"
-                                Margin="20,17,0,0"
+                                Margin="20,18,0,0"
                                 IsVisible="{Binding BindingContext.IsPriceVisible, Source={x:Reference NoWasteMainPageInstance}}">
                                 <Label.Text>
                                     <Binding Path="PurchaseAmount" StringFormat="Rs. {0}" />
@@ -294,9 +297,9 @@
 
                             <Label
                                 Grid.Row="0"
-                                Grid.Column="3"
+                                Grid.Column="2"
                                 Grid.ColumnSpan="2"
-                              Margin="20,50,10,0"
+                              Margin="20,55,10,0"
                                 FontSize="11"
                                 IsVisible="{Binding BindingContext.IsDatePurchaseVisible, Source={x:Reference NoWasteMainPageInstance}}">
                                 <Label.Text>
@@ -309,7 +312,8 @@
                                    Grid.Row="0"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="2"
-                                Margin="20,50,0,0">
+                                FontSize="13"
+                                Margin="25,55,0,0">
                                 <Label.Text>
                                     <Binding Path="Expiry" Converter="{StaticResource expiry}" StringFormat="Expiry Date: {0}"/>
                                 </Label.Text>
