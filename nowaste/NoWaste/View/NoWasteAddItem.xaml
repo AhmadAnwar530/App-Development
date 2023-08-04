@@ -52,11 +52,11 @@
             </StackLayout>
             <Label
                 Grid.Row="2"
-                Margin="20,0"
+                Margin="20,10,0,0"
                 Text="Name" />
             <Entry
                 x:Name="NameEntry"
-                Margin="20,0"
+                Margin="20,30,180,0"
                 Grid.Row="2"
                 TextChanged="SearchBar_OnTextChanged"
                 IsEnabled="{Binding IsEditable}"
@@ -64,12 +64,12 @@
 
             <Label
                 Grid.Row="3"
-                Margin="20,-5"
+                Margin="20,20,0,0"
                 Text="Amount" />
             <Entry
                 x:Name="PurchaseAmountEntry"
                 Keyboard="Numeric"
-                Margin="20,20"
+                Margin="20,50,280,0"
                 Grid.Row="3"
                 TextChanged="SearchBar_OnTextChanged"
                 IsEnabled="{Binding IsEditable}"
@@ -77,7 +77,7 @@
 
             <StackLayout
                 Grid.Row="4"
-                Margin="20,0,20,20"
+                Margin="20,20,20,20"
                 VerticalOptions="StartAndExpand">
 
                 <Label
@@ -106,6 +106,7 @@
                     Padding="0">
                     <DatePicker
                         x:Name="date"
+                        Margin="0,0,0,10"
                         IsEnabled="{Binding IsEditable}"
                         Date="{Binding Item.Expiry}"
                         DateSelected="Date_DateSelected" />

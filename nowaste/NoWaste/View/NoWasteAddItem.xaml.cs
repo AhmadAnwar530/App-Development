@@ -52,7 +52,7 @@ namespace NoWaste
         private void PurchaseDate_DateSelected(object sender, DateChangedEventArgs e)
         {
            
-            VM.PrchaseUpdateDays();
+            VM.PurchaseUpdateDays();
         }
 
         async void OnCancelClicked(object sender, EventArgs e)

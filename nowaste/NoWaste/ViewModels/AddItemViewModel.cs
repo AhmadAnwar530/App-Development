@@ -191,9 +191,9 @@ namespace NoWaste.ViewModels
             }
         }
 
-        public void PrchaseUpdateDays()
+        public void PurchaseUpdateDays()
         {
-            var span = Item.Expiry.Date.Subtract(DateTime.Today);
+            var span = Item.DatePurchase.Date.Subtract(DateTime.Today);
             if (span.TotalDays == 0)
             {
                 PurchaseDaysText = "Today";
@@ -302,7 +302,7 @@ namespace NoWaste.ViewModels
                 App._itemRepository.AddUpdateItem(Util.GetItemFromItemModel(Item));
                 await Application.Current.MainPage.Navigation.PopAsync();
                 CrossToastPopUp.Current.ShowToastMessage($"{Item.Name} added successfully (Expiring in {Math.Round(Item.Expiry.Subtract(DateTime.Today).TotalDays)} days)", Plugin.Toast.Abstractions.ToastLength.Long);
-                CrossLocalNotifications.Current.Show("Expiry", $"{Item.Name} is expiring within next 3 days.", 101, Item.Expiry.AddDays(-3));
+                CrossLocalNotifications.Current.Show("Expiry", $"{Item.Name} is expiring within {Math.Round(Item.Expiry.Subtract(DateTime.Today).TotalDays)} days.", 101);
             }
             else
             {
