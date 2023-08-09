@@ -11,10 +11,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Collections.Generic;
 using NoWaste.Models;
-using Plugin.LocalNotifications;
-using Plugin.Toast;
+using Plugin.LocalNotification;
+using System.Resources;
+using Acr.UserDialogs;
 using Rg.Plugins.Popup.Services;
 using NoWaste.View.Categories;
+using Acr.UserDialogs.Extended;
 
 namespace NoWaste.ViewModels
 {
@@ -301,8 +303,26 @@ namespace NoWaste.ViewModels
                 // await DisplayAlert("Barcode scan successful", "Here are the results:", " " + _barcode);
                 App._itemRepository.AddUpdateItem(Util.GetItemFromItemModel(Item));
                 await Application.Current.MainPage.Navigation.PopAsync();
-                CrossToastPopUp.Current.ShowToastMessage($"{Item.Name} added successfully (Expiring in {Math.Round(Item.Expiry.Subtract(DateTime.Today).TotalDays)} days)", Plugin.Toast.Abstractions.ToastLength.Long);
-                CrossLocalNotifications.Current.Show("Expiry", $"{Item.Name} is expiring within {Math.Round(Item.Expiry.Subtract(DateTime.Today).TotalDays)} days.", 101);
+                if (await LocalNotificationCenter.Current.AreNotificationsEnabled() == false)
+                {
+                    await LocalNotificationCenter.Current.RequestNotificationPermission();
+                }
+                UserDialogs.Instance.Toast($"{Item.Name} added successfully (Expiring in {Math.Round(Item.Expiry.Subtract(DateTime.Today).TotalDays)} days)", TimeSpan.FromSeconds(5));
+                var request = new NotificationRequest
+                {
+                    NotificationId = 101,
+                    Title = "Expiry",
+                    Description = $"{Item.Name} is expiring within {Math.Round(Item.Expiry.Subtract(DateTime.Today).TotalDays)} days.",
+                    BadgeNumber = 1,
+                    Schedule = new NotificationRequestSchedule
+                    {
+                        NotifyTime = DateTime.Now.AddSeconds(3),
+                        NotifyRepeatInterval = TimeSpan.FromDays(1)
+
+                    }
+                   
+                };
+               await LocalNotificationCenter.Current.Show(request);
             }
             else
             {

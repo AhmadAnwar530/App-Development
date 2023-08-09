@@ -15,6 +15,7 @@ using NoWaste.Enums;
 using Xamarin.Essentials;
 using System.Text;
 using System.IO;
+using System.Windows.Input;
 
 namespace NoWaste.ViewModels
 {
@@ -90,9 +91,16 @@ namespace NoWaste.ViewModels
         int ExpiredItemsCount = 0;
         int ExpiringItemsCount = 0;
         int ExpiringDays = 3;
+
+        public ICommand EditCommand { get; private set; }
         public MainPageViewModel()
         {
             ExpiringDays = Util.CurrentSetting.ExpiryNotificationDays;
+            EditCommand = new Command<ItemModel>(item =>
+            {
+                //You can pass the item to your NoWasteAddItem page, similar to how it's done in listView_ItemTapped
+                App.Current.MainPage.Navigation.PushAsync(new NoWasteAddItem(item));
+            });
         }
 
         public void ApplySort(SortEnum sortEnum)
@@ -314,6 +322,36 @@ namespace NoWaste.ViewModels
             }
         }
 
+        public void ApplyCategoryAndExpiryFilters(List<String> SelectedCategoryAndExpiry)
+        {
+            if (SelectedCategoryAndExpiry == null || SelectedCategoryAndExpiry.Count == 0)
+            {
+                ItemsList = AllItemsList;
+            }
+            else
+            {
+                // Extract expiry dates from the selected filters
+                var expiryDates = SelectedCategoryAndExpiry.Select(e =>
+                {
+                    if (e == "1 Day Ago")
+                        return DateTime.Today.AddDays(-1);
+                    if (e == "Today")
+                        return DateTime.Today;
+                    if (e == "Tomorrow")
+                        return DateTime.Today.AddDays(1);
+                    return DateTime.MinValue; // default value indicating this filter isn't a date
+                }).Where(date => date != DateTime.MinValue).ToList();
+
+                // Filter items based on category and expiry
+                ItemsList = new ObservableCollection<ItemModel>(
+                    AllItemsList.Where(x =>
+                        SelectedCategoryAndExpiry.Contains(x.CategoryName) ||
+                        expiryDates.Contains(x.Expiry.Date)));
+            }
+        }
+
+
+
         public void ApplyCategoryFilters(List<string> selectedCategories)
         {
             if (selectedCategories == null || selectedCategories.Count == 0)
@@ -323,6 +361,7 @@ namespace NoWaste.ViewModels
             else
             {
                 ItemsList = new ObservableCollection<ItemModel>(AllItemsList.Where(x => selectedCategories.Contains(x.CategoryName)));
+
             }
         }
 
@@ -352,6 +391,7 @@ namespace NoWaste.ViewModels
                     AllItemsList.Where(item => expiryDates.Contains(item.Expiry.Date)));
             }
         }
+
 
 
 

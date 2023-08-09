@@ -40,21 +40,23 @@ namespace NoWaste
             await Navigation.PopAsync();
         }
 
-        void listView_ItemTapped(System.Object sender, Xamarin.Forms.ItemTappedEventArgs e)
-        {
-            Navigation.PushAsync(new NoWasteAddItem((ItemModel)e.Item));
-        }
+        //void listView_ItemTapped(System.Object sender, Xamarin.Forms.ItemTappedEventArgs e)
+        //{
+        //    Navigation.PushAsync(new NoWasteAddItem((ItemModel)e.Item));
+        //}
 
         void ToolbarItem_Clicked(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new NoWasteAddItem());
         }
 
-        void Filter_Clicked(System.Object sender, System.EventArgs e)
+        void Search_Clicked(System.Object sender, System.EventArgs e)
         {
             search.IsVisible = !search.IsVisible;
             VM.SearchText = string.Empty;
         }
+
+        
 
         void Sort_Clicked(System.Object sender, System.EventArgs e)
         {
@@ -75,6 +77,24 @@ namespace NoWaste
             settingsPopup.SettingChanged += (IsShowPrice) => { VM.LoadItems (IsShowPrice); };
             settingsPopup.SettingChanged += (IsShowDatePurchase) => { VM.LoadItems(IsShowDatePurchase); };
             PopupNavigation.Instance.PushAsync(settingsPopup);
+        }
+
+        void Filter_Clicked(System.Object sender, System.EventArgs e)
+        {
+            var filterPopup = new FilterPopup(VM);
+            filterPopup.ApplyCategoryAndExpiryFilters += (SelectedCategoryAndExpiry) =>
+            {
+                try
+                {
+                    VM.ApplyCategoryAndExpiryFilters(SelectedCategoryAndExpiry);
+                    PopupNavigation.Instance.PopAsync();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error applying filters and closing popup: {ex}");
+                }
+            };
+            PopupNavigation.Instance.PushAsync(filterPopup);
         }
 
         void Name_Tapped(System.Object sender, System.EventArgs e)
@@ -166,10 +186,28 @@ namespace NoWaste
 
         private async void ExportButton_Clicked(object sender, System.EventArgs e)
         {
-            var csv = ConvertToCSV(VM.ItemsList);
-            var file = await SaveCSVToFile(csv);
-            await ShareFile(file);
+
+            bool shouldExport = await DisplayAlert(
+                "Export Confirmation",
+                "You are about to share the current list.\n\nIf you wish to filter your list before sharing, click the filter icon.", 
+                "OK", 
+                "Exit"
+            );
+
+            if (shouldExport)
+            {
+                var csv = ConvertToCSV(VM.ItemsList);
+                var file = await SaveCSVToFile(csv);
+                await ShareFile(file);
+            }
+            else
+            {
+                // Optionally, you can guide the user to another step after clicking 'Exit'. 
+                // For instance, navigate to another page or show a tip. 
+                // But if you just want to close the alert and do nothing, leave this section blank.
+            }
         }
+
 
 
     }

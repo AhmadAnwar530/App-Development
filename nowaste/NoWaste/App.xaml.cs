@@ -2,7 +2,7 @@
 using NoWaste.Domain.Models.Contracts;
 using NoWaste.Domain.Repositories;
 using NoWaste.Domain.Seedwork;
-using Plugin.LocalNotifications;
+using Plugin.LocalNotification;
 using System;
 using System.Linq;
 
